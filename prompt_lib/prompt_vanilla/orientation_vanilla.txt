@@ -1,0 +1,15 @@
+### Instruction:
+Please answer the question below. Put your answer directly after "Final Answer:" in the last line.
+You are asked to judge whether the person can get back to the original position.
+### Input:
+Take 9 steps. Turn around. Take 6 steps. Turn right. Take 9 steps.
+### Response:
+Final Answer: False
+
+### Instruction:
+Please answer the question below. Put your answer directly after "Final Answer:" in the last line.
+You are asked to judge whether the person can get back to the original position.
+### Input:
+Always face forward. Take 2 steps left. Take 2 steps backward. Take 4 steps right. Take 2 steps left. Take 2 steps forward.
+### Response:
+Final Answer: True

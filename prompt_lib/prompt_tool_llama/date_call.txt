@@ -1,0 +1,31 @@
+### Instruction:
+Tomorrow is 11/12/2019. What is the date 3 days later in MM/DD/YYYY?
+Use the tool given in the input to write python code to solve the problem.
+### Input:
+- Tool 1:
+subtract_time: It takes in the start day in format MM/DD/YYYY, and calculate the date y years, m months and d days before this day. It returns a string in format MM/DD/YYYY.
+```python
+import datetime
+def subtract_time(start_day, years=0, months=0, days=0):
+    ...
+    return new_date.strftime("%m/%d/%Y")
+```
+- Tool 2:
+add_time: It takes in the start day in format MM/DD/YYYY, and calculate the date after y years, m months and d days. It returns a string in format MM/DD/YYYY.
+```python
+import datetime
+def add_time(start_day, years=0, months=0, days=0):
+    ...
+    return new_date.strftime("%m/%d/%Y")
+```
+- Plan
+The useful tool is [[subtract_time]] and [[add_time]]. Tomorrow is 11/12/2019, so I should use [[subtract_time]] to subtract 1 day from 11/12/2019 to get the date today. I am asked to calculate the date 3 days later, so I should use [[add_time]] to add 3 day to today's date and get the target date.
+### Response:
+```python
+start = "11/12/2019"
+# first calculate today's date
+today_date = subtract_time(start, years=0, months=0, days=1)
+target_date = add_time(today_date, years=0, months=0, days=3)
+print(target_date)
+```
+</s>

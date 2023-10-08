@@ -1,0 +1,22 @@
+### Instruction:
+You are presented a question and several tools that maybe useful. Select the useful tools and plan how to solve the problem. Wrap the selected tool with [[...]]
+### Input:
+- Question:
+There is a ship of no more than 2052397 pineapples. If we divide them equally among 71 dinosaurs, we have 20 left; if we divide them equally among 137 cows, we have 67 left; if we divide them equally among 211 monkeys, we have 209 left. How many pineapples are in the ship?
+- Available tools:
+1. divide_remain: it takes in a, b, and c, and checks if the remainder of a divided by b is equal to c
+2. check_validity: it takes into a list of possible answers, and filters the list of answers based on the upper bound x
+### Response:
+The useful tool is [[divide_remain]] and [[check_validity]]. I should call the function [[divide_remain]] for three times to check the remainder of the number of pineapples divided by 71, 137, and 211. Then I should call the function [[check_validity]] to filter the possible answers.
+
+### Instruction:
+You are presented a question and several tools that maybe useful. Select the useful tools and plan how to solve the problem. Wrap the selected tool with [[...]]
+### Input:
+- Question:
+There is a room of no more than 127223 tomatoes. If we divide them equally among 29 monkeys, we have 15 left; if we divide them equally among 41 monkeys, we have 29 left; if we divide them equally among 107 hippos, we have 94 left. How many tomatoes are in the room?
+- Available tools:
+1. divide_remain: it takes in a, b, and c, and checks if the remainder of a divided by b is equal to c
+2. check_validity: it takes into a list of possible answers, and filters the list of answers based on the upper bound x
+### Response:
+The useful tools include [[divide_remain]] and [[check_validity]]. I should call the function [[divide_remain]] for three times to check the remainder of the number of tomatoes divided by 29, 41, and 107. Then I should call the function [[check_validity]] to get the answers that are not larger than 127223.
+

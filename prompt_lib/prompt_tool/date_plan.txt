@@ -1,0 +1,24 @@
+### Instruction:
+You are presented a question and several tools that maybe useful. Select the useful tools and plan how to solve the problem. Wrap the selected tool with [[...]]
+### Input:
+- Question:
+Tomorrow is 11/12/2019. What is the date 3 days later in MM/DD/YYYY?
+- Available tools:
+1. add_time: It takes in the start day in format MM/DD/YYYY, and calculate the date after y years, m months and d days. It returns a string in format MM/DD/YYYY.
+2. subtract_time: It takes in the start day in format MM/DD/YYYY, and calculate the date y years, m months and d days before this day. It returns a string in format MM/DD/YYYY.
+3. convert_hour: It takes the number of hours and convert it into days (integer).
+### Response:
+The useful tool is [[subtract_time]] and [[add_time]]. Tomorrow is 11/12/2019, so I should use [[subtract_time]] to subtract 1 day from 11/12/2019 to get the date today. I am asked to calculate the date 3 days later, so I should use [[add_time]] to add 3 day to today's date and get the target date.
+
+### Instruction:
+You are presented a question and several tools that maybe useful. Select the useful tools and plan how to solve the problem. Wrap the selected tool with [[...]]
+### Input:
+- Question:
+On May 9th, 2017 Jane bought 40 eggs. She ate one per day. Today she ran out of eggs. What is the date 24 hours later from today in MM/DD/YYYY?
+- Available tools:
+1. add_time: It takes in the start day in format MM/DD/YYYY, and calculate the date after y years, m months and d days. It returns a string in format MM/DD/YYYY.
+2. subtract_time: It takes in the start day in format MM/DD/YYYY, and calculate the date y years, m months and d days before this day. It returns a string in format MM/DD/YYYY.
+3. convert_hour: It takes the number of hours and convert it into days (integer).
+### Response:
+The useful tool is [[add_time]] and [[convert hour]]. Eat one egg a day from 05/09/2017, it will take 40 days to finish all the eggs. So we use [[add_time]] to add 40 days to get today's date. I am asked to calculate the date 24 hours later, so I should use [[convert hour]] to convert 24 hours into days and pass it as anargument into [[add_time]] to get the target date.
+

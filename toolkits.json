@@ -1,0 +1,83 @@
+{
+    "unit_conv": [
+        {
+            "same_ratio_calculate_first": "same_ratio_calculate_first: This tool assumes that a : b = x : y. x is the first position. It takes in a, b and y and returns x.\n```python\ndef same_ratio_calculate_first(a, b, y):\n    return (a / b) * y\n```",
+            "same_ratio_calculate_second": "same_ratio_calculate_second: This tool assumes that a : b = x : y. y is the second position. It takes in a, b and x and returns y.\n```python\ndef same_ratio_calculate_second(a, b, x):\n    return (b / a) * x\n```"
+        },
+        "```python\ndef same_ratio_calculate_first(a, b, y):\n    return (a / b) * y\n```\n\n```python\ndef same_ratio_calculate_second(a, b, x):\n    return (b / a) * x\n```\n\n"
+    ],
+    "dyn_cnt": [
+        {
+            "get_closing_parenthesis": "get_closing_parenthesis: This tool takes in an opening parenthesis and returns the corresponding closing parenthesis.\n```python\ndef get_closing_parenthesis(opening):\n    ...\n    return ...\n```",
+            "find_open_remaining": "find_open_remaining: This tool takes in a sequence of parenthesis and returns the single reamining opening paraenthesis that is not closed.\n```python\ndef find_open_remaining(parenthesis):\n    ...\n    return stack[0]\n```"
+        },
+        "```python\ndef get_closing_parenthesis(opening):\n    pairs_open = {'(': ')', '[': ']', '{': '}', '<': '>'}\n    if opening in pairs_open:\n        return pairs_open[opening]\n    else:\n        return None\n```\n\n```python\ndef find_open_remaining(parenthesis):\n    parenthesis = parenthesis.split(\" \")\n    pairs_open = {'(': ')', '[': ']', '{': '}', '<': '>'}\n    pairs_close = {')': '(', ']': '[', '}': '{', '>': '<'}\n    stack = []\n    for p in parenthesis:\n        if p in pairs_open:\n            stack.append(p)\n        elif p in pairs_close:\n            if pairs_close[p] in stack:\n                stack.remove(pairs_close[p])\n    return stack[0]\n```\n\n"
+    ],
+    "date": [
+        {
+            "add_time": "add_time: It takes in the start day in format MM/DD/YYYY, and calculate the date after y years, m months and d days. It returns a string in format MM/DD/YYYY.\n```python\nimport datetime\ndef add_time(start_day, years=0, months=0, days=0):\n    ...\n    return new_date.strftime(\"%m/%d/%Y\")\n```",
+            "subtract_time": "subtract_time: It takes in the start day in format MM/DD/YYYY, and calculate the date y years, m months and d days before this day. It returns a string in format MM/DD/YYYY.\n```python\nimport datetime\ndef subtract_time(start_day, years=0, months=0, days=0):\n    ...\n    return new_date.strftime(\"%m/%d/%Y\")\n```",
+            "convert_hour": "convert_hour: It takes the number of hours and convert it into days (integer).\n```python\nimport datetime\nimport math\ndef convert_hour(hours):\n    ...\n    return days\n```"
+        },
+        "```python\nimport datetime\ndef add_time(start_day, years=0, months=0, days=0):\n    start_date = datetime.datetime.strptime(start_day, \"%m/%d/%Y\")\n    new_date = start_date + datetime.timedelta(days=days)\n    if new_date.month + months > 12:\n        r = int((new_date.month + months) / 12)\n        new_date = new_date.replace(year=new_date.year + years + r, month=(new_date.month + months - 1)%12 + 1)\n    else:\n        new_date = new_date.replace(year=new_date.year + years, month=new_date.month + months)\n    return new_date.strftime(\"%m/%d/%Y\")\n```\n\n```python\nimport datetime\ndef subtract_time(start_day, years=0, months=0, days=0):\n    start_date = datetime.datetime.strptime(start_day, \"%m/%d/%Y\")\n    new_date = start_date - datetime.timedelta(days=days)\n    if new_date.month - months <= 0:\n        r = int((new_date.month - months) / -12) + 1\n        new_date = new_date.replace(year=new_date.year - years - r, month=(new_date.month - months - 1)%12 + 1)\n    else:\n        new_date = new_date.replace(year=new_date.year - years, month=new_date.month - months)\n    return new_date.strftime(\"%m/%d/%Y\")\n```\n\n```python\nimport datetime\nimport math\ndef convert_hour(hours):\n    days = math.ceil(hours / 24)\n    return days\n```\n\n"
+    ],
+    "matrix": [
+        {
+            "multiply": "multiply: it takes in two lists representing the shape of two matrix, and returns the shape of their product.\n```python\ndef multiply(shape1, shape2):\n    ...\n    return result_shape\n```",
+            "kronecker": "kronecker: it takes in two list representing the shape of two matrix, and returns the shape of their kronecker product.\n```python\ndef kronecker(shape1, shape2):\n    ...\n    return result_shape\n```",
+            "sum_over_axis": "sum_over_axis: it takes a list representing the shape of the matrix, and the dimension of the axis that is to be sum up. It returns the shape of the resulting matrix.\n```python\ndef sum_over_axis(shape, axis):\n    ...\n    return result_shape\n```",
+            "transpose": "transpose: it takes a list representing the shape of a matrix to be transposed, and returns the shape of the resulting matrix.\n```python\ndef transpose(shape):\n    ...\n    return result_shape\n```",
+            "add_subtract_hadamard": "add_subtract_hadamard: it takes two lists representing the shape of two matrices for add, sbstract and hadamard, and returns the shape of the resulting matrix.\n```python\ndef add_subtract_hadamard(shape1, shape2):\n    ...\n    return shape1\n```"
+        },
+        "```python\ndef multiply(shape1, shape2):\n    if shape1[1] != shape2[0]:\n        raise ValueError(\"Matrix shapes are not compatible for multiplication.\")  \n    result_shape = shape1[:-1] + [shape2[-1]]\n    return result_shape\n```\n\n```python\ndef kronecker(shape1, shape2):\n    if len(shape1) != len(shape2):\n        raise Exception(\"The number of dimensions of the two matrices is not equal\")\n    result_shape = [dim1 * dim2 for dim1, dim2 in zip(shape1, shape2)]\n    return result_shape\n```\n\n```python\ndef sum_over_axis(shape, axis):\n    if axis >= len(shape):\n        raise ValueError(\"Invalid axis dimension.\")\n    \n    result_shape = shape[:axis] + shape[axis+1:]\n    return result_shape\n```\n\n```python\ndef transpose(shape):\n    result_shape = list(reversed(shape))\n    return result_shape\n```\n\n```python\ndef add_subtract_hadamard(shape1, shape2):\n    assert shape1 == shape2\n    return shape1\n```\n\n"
+    ],
+    "arithmetic": [
+        {
+            "add": "add: it takes in two numbers and returns their sum\n```python\ndef add(a, b):\n    return a + b\n```",
+            "sub": "sub: it takes in two numbers a and b and returns a - b\n```python\ndef sub(a, b):\n    return a - b\n```",
+            "mul": "mul: it takes in two numbers and returns their product\n```python\ndef mul(a, b):\n    return a * b\n```",
+            "div": "div: it takes in two numbers a and b and returns the value of a / b\n```python\ndef div(a, b):\n    return a / b\n```",
+            "mod": "mod: it takes in two numbers a and b and returns a % b\n```python\ndef mod(a, b):\n    return a % b\n```"
+        },
+        "```python\ndef add(a, b):\n    return a + b\n```\n\n```python\ndef sub(a, b):\n    return a - b\n```\n\n```python\ndef mul(a, b):\n    return a * b\n```\n\n```python\ndef div(a, b):\n    return a / b\n```\n\n```python\ndef mod(a, b):\n    return a % b\n```\n\n"
+    ],
+    "orientation": [
+        {
+            "update_orientation": "update_orientation: It takes the original orientation(N, E, S or W) and turn direction(left, right or around), and returns the new orientation. It should be used only if not always face forward.\n```python\ndef update_orientation(orientation, turn_direction):\n    ...\n    return orientations[new_index]\n```",
+            "update_location": "update_location: It takes the current location(x, y), orientation(N, E, S or W), and steps, and returns the new location after action.\n```python\ndef update_location(current_location, orientation, steps):\n    ...\n    return new_location\n```"
+        },
+        "```python\ndef update_orientation(orientation, turn_direction):\n    orientations = [\"N\", \"E\", \"S\", \"W\"]\n    current_index = orientations.index(orientation)\n    if turn_direction == \"left\":\n        new_index = (current_index - 1) % 4\n    elif turn_direction == \"right\":\n        new_index = (current_index + 1) % 4\n    elif turn_direction == \"around\":\n        new_index = (current_index + 2) % 4\n    else:\n        raise ValueError(\"Invalid turn direction.\")\n    return orientations[new_index]\n```\n\n```python\ndef update_location(current_location, orientation, steps):\n    x, y = current_location\n    if orientation == \"N\":\n        new_location = (x, y + steps)\n    elif orientation == \"E\":\n        new_location = (x + steps, y)\n    elif orientation == \"S\":\n        new_location = (x, y - steps)\n    elif orientation == \"W\":\n        new_location = (x - steps, y)\n    return new_location\n```\n\n"
+    ],
+    "remainder": [
+        {
+            "divide_remain": "divide_remain: it takes in a, b, and c, and checks if the remainder of a divided by b is equal to c\n```python\ndef divide_remain(a, b, c):\n    return a % b == c\n```",
+            "check_validity": "check_validity: it takes into a list of possible answers, and filters the list of answers based on the upper bound x\n```python\ndef check_validity(answers, x):\n    return [answer for answer in answers if answer <= x]\n```"
+        },
+        "```python\ndef divide_remain(a, b, c):\n    return a % b == c\n```\n\n```python\ndef check_validity(answers, x):\n    return [answer for answer in answers if answer <= x]\n```\n\n"
+    ],
+    "track_shuffle": [
+        {
+            "create_object_dict": "create_object_dict: this tool takes in a list of people and their initial object, and returns a dictionary mapping each person to their object.\n```python\ndef create_object_dict(people, objects):\n    ...\n    return object_dict\n```",
+            "update_object_dict": "update_object_dict: this tool takes in an object dictionary, a list of object trades, and updates the object dictionary based on the trades.\n```python\ndef update_object_dict(object_dict, trades):\n    ...\n    return object_dict\n```",
+            "parse_trades": "parse_trades: this tool takes in a string of trades and returns a list of individual trades.\n```python\ndef parse_trades(trades_str):\n    ...\n    return trades\n```",
+            "get_final_object": "get_final_object: this tool takes in a object dictionary and returns the object held by the target person finally.\n```python\ndef get_final_object(object_dict, target_person):\n    return object_dict[target_person]\n```"
+        },
+        "```python\ndef create_object_dict(people, objects):\n    object_dict = dict(zip(people, objects))\n    return object_dict\n```\n\n```python\ndef update_object_dict(object_dict, trades):\n    for trade in trades:\n        person1, person2 = trade.split(' and ')\n        object_dict[person1], object_dict[person2] = object_dict[person2], object_dict[person1]\n    return object_dict\n```\n\n```python\ndef parse_trades(trades_str):\n    trades = trades_str.split('. Then, ')\n    trades[0] = trades[0].replace('At the start', '')\n    trades[-1] = trades[-1].replace('At the end', '')\n    return trades\n```\n\n```python\ndef get_final_object(object_dict, target_person):\n    return object_dict[target_person]\n```\n\n"
+    ],
+    "boolean": [
+        {
+            "evaluate_expression": "evaluate_expression: this tool takes in an expression as a string, evaluates it using Python's eval() function, and returns the result.\n```python\ndef evaluate_expression(expression):\n    ...\n    return ...\n```",
+            "extract_valid_expressions": "extract_valid_expressions: this tool takes in a string and extract the valid string that represents the expression.\n```python\ndef extract_valid_expressions(question_string):\n    ...\n    return expression\n```"
+        },
+        "```python\ndef evaluate_expression(expression):\n    try:\n        result = eval(expression)\n        return result\n    except SyntaxError:\n        return \"Invalid expression\"\n```\n\n```python\ndef extract_valid_expressions(question_string):\n    expression = question_string.split(':')[1].split('is')[0].strip()\n    return expression\n```\n\n"
+    ],
+    "dyck": [
+        {
+            "get_closing_parenthesis": "get_closing_parenthesis: This tool takes in an opening parenthesis and returns the corresponding closing parenthesis.\n```python\ndef get_closing_parenthesis(opening):\n    ...\n    return ...\n```",
+            "get_opening_parenthesis": "get_opening_parenthesis: This tool takes in an closing parenthesis and returns the corresponding opening parenthesis.\n```python\ndef get_opening_parenthesis(closing):\n    ...\n    return ...\n```",
+            "stack_insert": "stack_insert: This tool takes in a stack and an element and returns the stack with the element inserted at the top.\n```python\ndef stack_insert(stack, element):\n    ...\n    return stack\n```",
+            "stack_pop": "stack_pop: This tool takes in a stack and returns the stack with the top element removed.\n```python\ndef stack_pop(stack):\n    ...\n    return stack\n```"
+        },
+        "```python\ndef get_closing_parenthesis(opening):\n    openings = ['(', '[', '{', '<']\n    closings = [')', ']', '}', '>']\n    if opening in openings:\n        return closings[openings.index(opening)]\n    else:\n        return None\n```\n\n```python\ndef get_opening_parenthesis(closing):\n    openings = ['(', '[', '{', '<']\n    closings = [')', ']', '}', '>']\n    if closing in closings:\n        return openings[closings.index(closing)]\n    else:\n        return None\n```\n\n```python\ndef stack_insert(stack, element):\n    stack.append(element)\n    return stack\n```\n\n```python\ndef stack_pop(stack):\n    if len(stack) > 0:\n        stack.pop()\n    return stack\n```\n\n"
+    ]
+}

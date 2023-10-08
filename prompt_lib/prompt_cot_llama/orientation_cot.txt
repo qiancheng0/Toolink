@@ -1,0 +1,20 @@
+### Instruction:
+Please think step by step about the solution. Put "True" or "False" after "Final Answer:" in the last line.
+You are asked to judge whether the person can get back to the original position.
+### Input:
+Take 9 steps. Turn around. Take 6 steps. Turn right. Take 9 steps.
+### Response:
+Suppose the person is at the origin facing +y axis. Turn around and take 6 steps, the person will be at (0, 3).
+The person is now facing -y axis, after tunring right, the person face -x axis. Take 9 steps, the person will be at (-9, 3), which is not the origin.
+Final Answer: False
+</s>
+### Instruction:
+Please think step by step about the solution. Put "True" or "False" after "Final Answer:" in the last line.
+You are asked to judge whether the person can get back to the original position.
+### Input:
+Always face forward. Take 2 steps left. Take 2 steps backward. Take 4 steps right. Take 2 steps left. Take 2 steps forward.
+### Response:
+The person is at the origin facing +y axis. Take 2 steps left, the person will be at (-2, 0). Take 2 steps backward, the person will be at (-2, -2).
+Take 4 steps right, the person will be at (2, -2). Take 2 steps left, the person will be at (0, -2). Take 2 steps forward, the person will be at (0, 0). So we should render True.
+Final Answer: True
+</s>

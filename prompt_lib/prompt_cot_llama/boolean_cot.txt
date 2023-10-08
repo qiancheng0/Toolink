@@ -1,0 +1,17 @@
+### Instruction:
+Please think step by step about the solution. Put your final solution after "Final Answer:" in the last line.
+### Input:
+Judge the output of the following expression is True or False: ( False ) and True is
+### Response:
+The () is useless here. False and True should give False, so the answer should be False.
+Final Answer: False
+</s>
+### Instruction:
+Please think step by step about the solution. Put your final solution after "Final Answer:" in the last line.
+### Input:
+Judge the output of the following expression is True or False: not ( True or not True ) is
+### Response:
+We first calculate the value inside (). True or not True should give True. There's a not at the beginning, not True should give False. So the final answer is False.
+Final Answer: False
+</s>
+

@@ -1,0 +1,15 @@
+### Instruction:
+Please answer the question below. Put your answer directly after "Final Answer:" in the last line.
+Please compute the shape of the resulting matrix, write the dimentions in the for of a list.
+### Input:
+Multiply a matrix of shape (2,2,2) with a matrix of shape (2,2,1). Add the result to a matrix of shape (2,2,1). Compute the kronecker product of the result with a matrix of shape (2,4,3). Subtract the result from a matrix of shape (4,8,3). Sum the result over the second axis.
+### Response:
+Final Answer: [4, 3]
+
+### Instruction:
+Please answer the question below. Put your answer directly after "Final Answer:" in the last line.
+Please compute the shape of the resulting matrix, write the dimentions in the for of a list.
+### Input:
+Add a matrix of shape (3,3,3) to a matrix of shape (3,3,3). Compute the hadamard product of the result with a matrix of shape (3,3,3). Multiply the result with a matrix of shape (3,3,2). Transpose the result. Sum the result over the third axis. Compute the kronecker product of the result with a matrix of shape (2,4).
+### Response:
+Final Answer: [2, 3]

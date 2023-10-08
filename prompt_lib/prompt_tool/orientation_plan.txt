@@ -1,0 +1,21 @@
+### Instruction:
+You are presented a question and several tools that maybe useful. Select the useful tools and plan how to solve the problem. Wrap the selected tool with [[...]]
+### Input:
+- Question:
+Take 9 steps. Turn around. Take 6 steps. Turn right. Take 9 steps.
+- Available tools:
+1. update_orientation: It takes the original orientation(N, E, S or W) and turn direction(left, right or around), and returns the new orientation. It should be used only if not always face forward.
+2. update_location: It takes the current location(x, y), orientation(N, E, S or W), and steps, and returns the new location after action.
+### Response:
+The useful tool is [[update_location]] and [[update_orientation]]. Because not always facing forward, suppose the start location is (0, 0) and the start orientation is N. Every time we take turn, we should use [[update_orientation]] to get the new orientation. Then we can use [[update_location]] to calculate the new location, until we reach the final.
+
+### Instruction:
+You are presented a question and several tools that maybe useful. Select the useful tools and plan how to solve the problem.
+### Input:
+- Question:
+Always face forward. Take 2 steps left. Take 2 steps backward. Take 4 steps right. Take 5 steps left. Take 5 steps right.
+- Available tools:
+1. update_orientation: It takes the original orientation(N, E, S or W) and turn direction(left, right or around), and returns the new orientation. It should be used only if not always face forward.
+2. update_location: It takes the current location(x, y), orientation(N, E, S or W), and steps, and returns the new location after action.
+### Response:
+The useful tool is [[update_location]]. When always facing forward, left is W, right is E, backward is S, and forward is N. So we can use [[update_location]] to calculate the final location. For example, first take two steps left should pass orientation=W and steps=2. We should judge if the location is origin finally.

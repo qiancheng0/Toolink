@@ -1,0 +1,18 @@
+### Instruction:
+What is 83384 divided by 41692?
+Use the tool given in the input to write python code to solve the problem.
+### Input:
+- Tool 1:
+div: it takes in two numbers a and b and returns the integer value of a / b
+```python
+def div(a, b):
+    return int(a / b)
+```
+- Plan
+The useful tool is [[div]]. I should call the function [[div]] and pass in 83384 and 41692 to get the answer.
+### Response:
+```python
+result = div(83384 / 41692)
+print(result)
+```
+</s>

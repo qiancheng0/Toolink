@@ -1,0 +1,15 @@
+### Instruction:
+Please think step by step about the solution. Put your final solution after "Final Answer:" in the last line.
+### Input:
+You are asked to to predict the closing parentheses of a Dyck-n prefix. What's the closing parentheses for prefix: ( { < [ ( < ( ( ) ) > ) ] [ < [ ( < > ) ] > ] > } ?
+### Response:
+The [ ( < ( ( ) ) > ) ] in the middle is complete, and the [ < [ ( < > ) ] > ] in the middle is complete. So the last } is matched with the second symbol { . Therefore there is only one ( left at the beginning which is not closed. So the closing parentheses should be )
+Final Answer: )
+
+### Instruction:
+Please think step by step about the solution. Put your final solution after "Final Answer:" in the last line.
+### Input:
+You are asked to to predict the closing parentheses of a Dyck-n prefix. What's the closing parentheses for prefix: < ( < < ( ?
+### Response:
+There is no completed sequence and all the symbols are open-ended. In order to give the closing sequence, we should look at < ( < < ( reversely and find the closing parenthese for each one. Therefore the closing parentheses sequence should be ) > > ) >
+Final Answer: ) > > ) >

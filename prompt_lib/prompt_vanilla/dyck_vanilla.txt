@@ -1,0 +1,13 @@
+### Instruction:
+Please answer the question below. Put your answer directly after "Final Answer:" in the last line.
+### Input:
+You are asked to to predict the closing parentheses of a Dyck-n prefix. What's the closing parentheses for prefix: ( { < [ ( < ( ( ) ) > ) ] [ < [ ( < > ) ] > ] > } ?
+### Response:
+Final Answer: )
+
+### Instruction:
+Please answer the question below. Put your answer directly after "Final Answer:" in the last line.
+### Input:
+You are asked to to predict the closing parentheses of a Dyck-n prefix. What's the closing parentheses for prefix: < ( < < ( ?
+### Response:
+Final Answer: ) > > ) >

@@ -1,0 +1,37 @@
+### Instruction:
+Multiply a matrix of shape (2,2,2) with a matrix of shape (2,2,1). Add the result to a matrix of shape (2,2,1). Compute the kronecker product of the result with a matrix of shape (2,4,3).
+Use the tool given in the input to write python code to solve the problem.
+### Input:
+- Tool 1:
+multiply: it takes in two lists representing the shape of two matrix, and returns the shape of their product.
+```python
+def multiply(shape1, shape2):
+    ...
+    return result_shape
+```
+- Tool 2:
+kronecker: it takes in two list representing the shape of two matrix, and returns the shape of their kronecker product.
+```python
+def kronecker(shape1, shape2):
+    ...
+    return result_shape
+```
+- Tool 3:
+add_subtract_hadamard: it takes two lists representing the shape of two matrices for add, sbstract and hadamard, and returns the shape of the resulting matrix.
+```python
+def add_subtract_hadamard(shape1, shape2):
+    return shape1
+```
+- Plan
+The useful tool is [[add_subtract_hadamard]], [[multiply]], [[kronecker]].
+First use [[multiply]] to calculate the shape of product.
+Next use [[add_subtract_hadamard]] to calculate the shape of sum.
+Finally we use [[kronecker]] to calculate the shape of kronecker product.
+### Response:
+```python
+result = multiply([2,2,2], [2,2,1])
+result = add_subtract_hadamard(result, [2,2,1])
+result = kronecker(result, [2,4,3])
+print(result)
+```
+</s>

@@ -1,0 +1,38 @@
+### Instruction:
+Alice, Bob, and Claire are on the same team in a soccer match. At the start of the match, they are each assigned to a position: Alice is playing left midfielder, Bob is playing fullback, and Claire is playing right midfielder. \n\nAs the game progresses, pairs of players occasionally swap positions. First, Alice and Claire trade positions. Then, Bob and Alice trade positions. Finally, Claire and Alice trade positions. At the end of the match, Bob is playing
+Use the tool given in the input to write python code to solve the problem.
+### Input:
+- Tool 1:
+create_object_dict: this tool takes in a list of people and their initial object, and returns a dictionary mapping each person to their object.
+```python
+def create_object_dict(people, objects):
+    ...
+    return object_dict
+```
+- Tool 2:
+update_object_dict: this tool takes in an object dictionary, a list of object trades, and updates the object dictionary based on the trades.
+```python
+def update_object_dict(object_dict, trades):
+    ...
+    return object_dict
+```
+- Tool 3:
+get_final_object: this tool takes in a object dictionary and returns the object held by the target person finally.
+```python
+def get_final_object(object_dict, target_person):
+    return object_dict[target_person]
+```
+- Plan
+The useful tools are [[create_object_dict]], [[update_object_dict]] and [[get_final_object]].
+I should first use [[create_object_dict]] to create a dictionary mapping each person with the position at the start. Then I should use [[update_object_dict]] to update the dictionary with a list of trades between Alice and Claire, Bob and Alice, and finally Claire and Alice. Finally, I should use [[get_final_object]] to get the final position played by Bob.
+### Response:
+```python
+people = ["Alice", "Bob", "Claire"]
+positions = ["left midfielder", "fullback", "right midfielder"]
+dictionary = create_object_dict(people, positions)
+trades = ["Alice and Claire", "Bob and Alice", "Claire and Alice"]
+dictionary = update_object_dict(dictionary, trades)
+final = get_final_object(dictionary, "Bob")
+print(final)
+```
+</s>

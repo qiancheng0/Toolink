@@ -1,0 +1,13 @@
+### Instruction:
+Please answer the question below. Put your answer directly after "Final Answer:" in the last line.
+### Input:
+What is 26270 plus 70625?
+### Response:
+Final Answer: 96895
+
+### Instruction:
+Please answer the question below. Put your answer directly after "Final Answer:" in the last line.
+### Input:
+What is the remainder of 10 plus 7 divided by 3?
+### Response:
+Final Answer: 2

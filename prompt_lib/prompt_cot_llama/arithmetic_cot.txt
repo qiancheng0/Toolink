@@ -1,0 +1,16 @@
+### Instruction:
+Please think step by step about the solution. Put your final solution after "Final Answer:" in the last line.
+### Input:
+What is 26270 plus 70625?
+### Response:
+We can add the two numbers together to get 96895.
+Final Answer: 96895
+</s>
+### Instruction:
+Please think step by step about the solution. Put your final solution after "Final Answer:" in the last line.
+### Input:
+What is the remainder of 10 plus 7 divided by 3?
+### Response:
+We can first calculate 10 plus 7, which is 17. Then we can divide 17 by 3 to get 5 with a remainder of 2.
+Final Answer: 2
+</s>

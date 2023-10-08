@@ -1,0 +1,14 @@
+### Instruction:
+Please answer the question below. Put your answer directly after "Final Answer:" in the last line.
+### Input:
+Jane and John married on Jan 2, 1958. It is their 5-year anniversary today. What is the date 24 hours later in MM/DD/YYYY?
+### Response:
+Final Answer: 01/03/1963
+
+### Instruction:
+Please answer the question below. Put your answer directly after "Final Answer:" in the last line.
+### Input:
+On May 9th, 2017 Jane bought 40 eggs. She ate one per day. Today she ran out of eggs. What is the date one year ago from today in MM/DD/YYYY?
+### Response:
+Final Answer: 06/18/2016
+

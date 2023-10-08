@@ -1,0 +1,12 @@
+### Instruction:
+You are presented a question and several tools that maybe useful. Select the useful tools and plan how to solve the problem.
+### Input:
+- Question:
+Judge the output of the following expression is True or False: ( False ) and True is
+- Available tools:
+1. evaluate_expression: this tool takes in an expression as a string, evaluates it using Python's eval() function, and returns the result.
+2. extract_valid_expressions: this tool takes in a string and extract the valid string that represents the expression.
+### Response:
+The useful tools is [[evaluate_expression]].
+I can directly extract the expression and input it into [[evaluate_expression]] to get the result.
+</s>

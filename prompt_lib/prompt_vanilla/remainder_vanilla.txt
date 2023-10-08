@@ -1,0 +1,13 @@
+### Instruction:
+Please answer the question below. Put your answer directly after "Final Answer:" in the last line.
+### Input:
+There is a ship of no more than 2052397 pineapples. If we divide them equally among 71 dinosaurs, we have 20 left; if we divide them equally among 137 cows, we have 67 left; if we divide them equally among 211 monkeys, we have 209 left. How many pineapples are in the ship?
+### Response:
+Final Answer: 1855321
+
+### Instruction:
+Please answer the question below. Put your answer directly after "Final Answer:" in the last line.
+### Input:
+There is a room of no more than 127223 tomatoes. If we divide them equally among 29 monkeys, we have 15 left; if we divide them equally among 41 monkeys, we have 29 left; if we divide them equally among 107 hippos, we have 94 left. How many tomatoes are in the room?
+### Response:
+Final Answer: 19996

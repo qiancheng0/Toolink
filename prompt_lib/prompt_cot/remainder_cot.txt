@@ -1,0 +1,15 @@
+### Instruction:
+Please think step by step about the solution. Put your final solution after "Final Answer:" in the last line.
+### Input:
+There is a ship of no more than 2052397 pineapples. If we divide them equally among 71 dinosaurs, we have 20 left; if we divide them equally among 137 cows, we have 67 left; if we divide them equally among 211 monkeys, we have 209 left. How many pineapples are in the ship?
+### Response:
+We apply the Chinese remainder theorem. x ≡ 20 (mod 71) and x ≡ 67 (mod 137). Applying the Chinese Remainder Theorem to the above congruences, we get a solution x ≡ 20255 (mod 9717). Now, let's find a number that satisfies the condition for the monkeys as well, which is x ≡ 209 (mod 211). Again, applying the Chinese Remainder Theorem to the above congruences and we get a solution x ≡ 1855321 (mod 2052397). So, the number of pineapples in the ship is 1855321.
+Final Answer: 1855321
+
+### Instruction:
+Please think step by step about the solution. Put your final solution after "Final Answer:" in the last line.
+### Input:
+There is a room of no more than 127223 tomatoes. If we divide them equally among 29 monkeys, we have 15 left; if we divide them equally among 41 monkeys, we have 29 left; if we divide them equally among 107 hippos, we have 94 left. How many tomatoes are in the room?
+### Response:
+Let's start with the first condition, which is x ≡ 15 (mod 29) and x ≡ 29 (mod 41). Applying the Chinese Remainder Theorem to the above congruences, we get a solution x ≡ 674 (mod 1189). Now, let's find a number that satisfies the condition for the hippos as well, which is x ≡ 94 (mod 107). Again, applying the Chinese Remainder Theorem to the above congruences and we get a solution x ≡ 19996 (mod 151523). So, the number of tomatoes in the room is 19996.
+Final Answer: 19996

@@ -1,0 +1,43 @@
+### Instruction:
+You are asked to to predict the closing parentheses of a Dyck-n prefix. What's the closing parentheses for prefix: ( { < [ ( < ( ( ) ) > ) ] [ < [ ( < > ) ] > ] > } ?
+Use the tool given in the input to write python code to solve the problem. Please wrap the code in your response in ```python...```
+### Input:
+- Tool 1:
+get_closing_parenthesis: This tool takes in an opening parenthesis and returns the corresponding closing parenthesis.
+```python
+def get_closing_parenthesis(opening):
+    ...
+    return ...
+```
+- Tool 2:
+stack_insert: This tool takes in a stack and an element and returns the stack with the element inserted at the top.
+```python
+def stack_insert(stack, element):
+    ...
+    return stack
+```
+- Tool 3:
+stack_pop: This tool takes in a stack and returns the stack with the top element removed.
+```python
+def stack_pop(stack):
+    ...
+    return stack
+```
+- Plan
+The useful tool is [[get_closing_parenthesis]], [[stack_insert]] and [[stack_pop]].
+If we met an opening, we use [[stack_insert]] to insert the parenthesis. If we met a closing, we use [[stack_pop]] to remove the top element. Finally we use [[get_closing_parenthesis]] to get the closing parenthesis of the top elements left in the stack.
+### Response:
+```python
+expression = "( { < [ ( < ( ( ) ) > ) ] [ < [ ( < > ) ] > ] > }"
+stack = []
+for char in expression:
+    if char in ['(', '[', '{', '<']:
+        stack = stack_insert(stack, char)
+    elif char in [')', ']', '}', '>']:
+        stack = stack_pop(stack)
+final = ""
+for char in stack[::-1]:
+    closing = get_closing_parenthesis(char)
+    final += closing + " "
+print(final)
+```

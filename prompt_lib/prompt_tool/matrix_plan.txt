@@ -1,0 +1,36 @@
+### Instruction:
+You are presented a question and several tools that maybe useful. Select the useful tools and plan how to solve the problem. Wrap the selected tool with [[...]]
+### Input:
+- Question:
+Multiply a matrix of shape (2,2,2) with a matrix of shape (2,2,1). Add the result to a matrix of shape (2,2,1). Compute the kronecker product of the result with a matrix of shape (2,4,3).
+- Available tools:
+1. multiply: it takes in two lists representing the shape of two matrix, and returns the shape of their product.
+2. kronecker: it takes in two list representing the shape of two matrix, and returns the shape of their kronecker product.
+3. sum_over_axis: it takes a list representing the shape of the matrix, and the dimension of the axis that is to be sum up. It returns the shape of the resulting matrix.
+4. transpose: it takes a list representing the shape of a matrix to be transposed, and returns the shape of the resulting matrix.
+5. add_subtract_hadamard: it takes two lists representing the shape of two matrices for add, sbstract and hadamard, and returns the shape of the resulting matrix.
+### Response:
+The useful tool is [[add_subtract_hadamard]], [[multiply]], [[kronecker]].
+First use [[multiply]] to calculate the shape of product.
+Next use [[add_subtract_hadamard]] to calculate the shape of sum.
+Finally we use [[kronecker]] to calculate the shape of kronecker product.
+
+### Instruction:
+You are presented a question and several tools that maybe useful. Select the useful tools and plan how to solve the problem. Wrap the selected tool with [[...]]
+### Input:
+- Question:
+Add a matrix of shape (3,3,3) to a matrix of shape (3,3,3). Compute the hadamard product of the result with a matrix of shape (3,3,3). Multiply the result with a matrix of shape (3,3,2). Transpose the result. Sum the result over the third axis. Compute the kronecker product of the result with a matrix of shape (2,4).
+- Available tools:
+1. multiply: it takes in two lists representing the shape of two matrix, and returns the shape of their product.
+2. kronecker: it takes in two list representing the shape of two matrix, and returns the shape of their kronecker product.
+3. sum_over_axis: it takes a list representing the shape of the matrix, and the dimension of the axis that is to be sum up. It returns the shape of the resulting matrix.
+4. transpose: it takes a list representing the shape of a matrix to be transposed, and returns the shape of the resulting matrix.
+5. add_subtract_hadamard: it takes two lists representing the shape of two matrices for add, sbstract and hadamard, and returns the shape of the resulting matrix.
+### Response:
+The useful tool is [[add_subtract_hadamard]], [[multiply]], [[transpose]], [[sum_over_axis]], and [[kronecker]].
+First use [[add_subtract_hadamard]] to calculate the shape of sum and the resulting matrix shape after hadamard.
+Next use [[multiply]] to calculate the shape of product.
+Then use [[transpose]] to calculate the resulting shape after transposing.
+Next use [[sum_over_axis]] to calculate the shape after summing over the third axis.
+Finally we use [[kronecker]] to calculate the shape after kronecker product with matrix of shape (2, 4).
+

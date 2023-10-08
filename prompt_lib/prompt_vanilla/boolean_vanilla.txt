@@ -1,0 +1,13 @@
+### Instruction:
+Please answer the question below. Put your answer directly after "Final Answer:" in the last line.
+### Input:
+Judge the output of the following expression is True or False: ( False ) and True is
+### Response:
+Final Answer: False
+
+### Instruction:
+Please answer the question below. Put your answer directly after "Final Answer:" in the last line.
+### Input:
+Judge the output of the following expression is True or False: not ( True or not True ) is
+### Response:
+Final Answer: False

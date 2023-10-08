@@ -1,0 +1,16 @@
+### Instruction:
+Please think step by step about the solution. Put your final solution after "Final Answer:" in the last line.
+### Input:
+Multiply a matrix of shape (2,2,2) with a matrix of shape (2,2,1). Add the result to a matrix of shape (2,2,1). Compute the kronecker product of the result with a matrix of shape (2,4,3). Subtract the result from a matrix of shape (4,8,3). Sum the result over the second axis.
+### Response:
+Multiplying a matrix of shape (2,2,2) with a matrix of shape (2,2,1) gives a matrix of shape (2,2,1). Add do not change the shape. Computing the kronecker product of the result with a matrix of shape (2,4,3) gives a matrix of shape (4,8,3). Subtracting the result from a matrix of shape (4,8,3) do not change shape. Summing the result over the second axis gives a matrix of shape (4,3).
+Final Answer: [4, 3]
+</s>
+### Instruction:
+Please think step by step about the solution. Put your final solution after "Final Answer:" in the last line.
+### Input:
+Add a matrix of shape (3,3,3) to a matrix of shape (3,3,3). Compute the hadamard product of the result with a matrix of shape (3,3,3). Multiply the result with a matrix of shape (3,3,2). Transpose the result. Sum the result over the third axis. Compute the kronecker product of the result with a matrix of shape (2,4).
+### Response:
+Adding the result to a matrix of shape (3,3,3) gives a matrix of shape (3,3,3). Computing the hadamard product of the result do not change the shape (3,3,3). Multiplying the result with a matrix of shape (3,3,2) gives a matrix of shape (3,3,2). Transposing the result gives a matrix of shape (2,3,3). Summing the result over the third axis gives a matrix of shape (2,3).
+Final Answer: [2, 3]
+</s>

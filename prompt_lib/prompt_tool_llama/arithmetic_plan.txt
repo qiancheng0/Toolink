@@ -1,0 +1,14 @@
+### Instruction:
+You are presented a question and several tools that maybe useful. Select the useful tools and plan how to solve the problem.
+### Input:
+- Question:
+What is 83384 divided by 41692?
+- Available tools:
+1. add: it takes in two numbers and returns their sum
+2. sub: it takes in two numbers a and b and returns a - b
+3. mul: it takes in two numbers and returns their product
+4. div: it takes in two numbers a and b and returns the integer value of a / b
+5. mod: it takes in two numbers a and b and returns a % b
+### Response:
+The useful tool is [[div]]. I should call the function [[div]] and pass in 83384 and 41692 to get the answer.
+</s>

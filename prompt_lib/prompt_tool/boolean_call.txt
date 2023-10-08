@@ -1,0 +1,20 @@
+### Instruction:
+Judge the output of the following expression is True or False: ( False ) and True is
+Use the tool given in the input to write python code to solve the problem. Please wrap the code in your response in ```python...```
+### Input:
+- Tool 1:
+evaluate_expression: this tool takes in an expression as a string, evaluates it using Python's eval() function, and returns the result.
+```python
+def evaluate_expression(expression):
+    ...
+    return ...
+```
+- Plan
+The useful tools is [[evaluate_expression]].
+I can directly extract the expression and input it into [[evaluate_expression]] to get the result.
+### Response:
+```python
+exp = "( False ) and True"
+result = evaluate_expression(exp)
+print(result)
+```

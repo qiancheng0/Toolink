@@ -1,6 +1,6 @@
 # LLaMA - Toolink
 
-We release here the code for the main experiments in paper *LLaMA-Toolink: Linking Toolkits and Tool-Using through Chain-of-Solving*, including the code of experiments on LLaMA-Toolink and ChatGPT, and the training of LLaMA-7B. We also release the base training dataset for tool-using. Please refer to our paper for more details.
+We release here the code for the main experiments in paper *Toolink: Linking Toolkit Creation and Using through Chain-of-Solving on Open-Source Model*, including the code of experiments on LLaMA-Toolink and ChatGPT, and the training of LLaMA-7B. We also release the base training dataset for tool-using. Please refer to our paper for more details.
 
 ## Preparation
 
@@ -65,5 +65,3 @@ We leverage the model we train in the previous adaptation, and test it under CoT
 Similar to the experiments on ChatGPT, we also test LLaMA-Toolink's tool-planning and tool-calling ability respectively in files `llama_plan.py` and `llama_call.py`.
 
 Specifically, for the test on LLaMA-Toolink, we do not need demonstrations (as we have already tuned it on CoS ability), so set `want_prompt` variable to `False`. For other baseline models including LLaMA-7B (raw) and Alpaca (raw), please set `want_prompt` to `True`.
-
-## Acknowledgement
